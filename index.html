@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Controle financeiro pessoal: entradas, despesas fixas e variáveis, parcelamentos, orçamentos e gráficos. Funciona offline, os dados ficam no seu navegador.">
+<meta name="theme-color" content="#0C0E16">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Finanças">
+<title>Controle Financeiro</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- SIDEBAR (desktop) -->
+  <aside id="sidebar" aria-label="Navegação principal">
+    <div class="sb-top">
+      <div class="sb-logo">💰 Finanças</div>
+      <div class="sb-sub">controle pessoal</div>
+    </div>
+    <nav class="sb-nav">
+      <button class="nav-btn active" data-section="resumo"><span class="ni" aria-hidden="true">◈</span> Resumo</button>
+      <button class="nav-btn" data-section="entradas"><span class="ni" aria-hidden="true">↓</span> Entradas</button>
+      <button class="nav-btn" data-section="fixas"><span class="ni" aria-hidden="true">⊟</span> Despesas Fixas</button>
+      <button class="nav-btn" data-section="variaveis"><span class="ni" aria-hidden="true">≋</span> Despesas Variáveis</button>
+      <button class="nav-btn" data-section="parcelas"><span class="ni" aria-hidden="true">⊕</span> Parcelamentos</button>
+      <button class="nav-btn" data-section="relatorios"><span class="ni" aria-hidden="true">▤</span> Relatórios</button>
+    </nav>
+    <div class="sb-bottom">
+      <button class="nav-btn" data-action="budgets"><span class="ni" aria-hidden="true">◎</span> Orçamentos</button>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div id="main">
+    <header id="topbar">
+      <h1 class="tb-title" id="hdr-title">Resumo</h1>
+      <div class="month-nav" role="group" aria-label="Mês">
+        <button id="prev-month" aria-label="Mês anterior">‹</button>
+        <span id="month-display" aria-live="polite"></span>
+        <button id="next-month" aria-label="Próximo mês">›</button>
+      </div>
+      <div class="tb-actions">
+        <button class="btn btn-ghost hide-mobile" data-action="import">↑ Carregar</button>
+        <button class="btn btn-primary hide-mobile" data-action="export-json">↓ Salvar</button>
+        <div class="menu-wrap">
+          <button class="btn btn-ghost btn-icon" id="menu-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Mais opções">⋯</button>
+          <div class="menu" id="menu" role="menu" hidden>
+            <button role="menuitem" data-action="export-json">↓ Salvar backup (JSON)</button>
+            <button role="menuitem" data-action="import">↑ Carregar backup</button>
+            <button role="menuitem" data-action="export-csv">⇩ Exportar mês em CSV</button>
+            <button role="menuitem" data-action="budgets">◎ Orçamentos por categoria</button>
+            <div class="menu-sep"></div>
+            <button role="menuitem" data-action="demo">✦ Carregar dados de exemplo</button>
+            <button role="menuitem" class="danger" data-action="reset">✕ Apagar todos os dados</button>
+          </div>
+        </div>
+      </div>
+      <input type="file" id="file-input" accept=".json,application/json" hidden>
+    </header>
+
+    <main id="content">
+      <section id="section-resumo" class="section active" aria-labelledby="hdr-title"></section>
+      <section id="section-entradas" class="section"></section>
+      <section id="section-fixas" class="section"></section>
+      <section id="section-variaveis" class="section"></section>
+      <section id="section-parcelas" class="section"></section>
+      <section id="section-relatorios" class="section"></section>
+    </main>
+  </div>
+
+  <!-- BOTTOM NAV (celular) -->
+  <nav id="bottomnav" aria-label="Navegação principal">
+    <button class="nav-item active" data-section="resumo"><span class="nav-icon" aria-hidden="true">◈</span><span>Resumo</span></button>
+    <button class="nav-item" data-section="entradas"><span class="nav-icon" aria-hidden="true">↓</span><span>Entradas</span></button>
+    <button class="nav-item" data-section="fixas"><span class="nav-icon" aria-hidden="true">⊟</span><span>Fixas</span></button>
+    <button class="nav-item" data-section="variaveis"><span class="nav-icon" aria-hidden="true">≋</span><span>Variáveis</span></button>
+    <button class="nav-item" data-section="parcelas"><span class="nav-icon" aria-hidden="true">⊕</span><span>Parcelas</span></button>
+    <button class="nav-item" data-section="relatorios"><span class="nav-icon" aria-hidden="true">▤</span><span>Gráficos</span></button>
+  </nav>
+</div>
+
+<button id="fab" aria-label="Adicionar">+</button>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="tooltip" role="tooltip" hidden></div>
+
+<!-- MODAL (formulários) -->
+<div class="modal-bg" id="modal-bg">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-drag" aria-hidden="true"></div>
+    <div class="modal-head">
+      <h3 id="modal-title">Novo item</h3>
+      <button class="modal-close" data-close aria-label="Fechar">✕</button>
+    </div>
+    <form id="modal-form" novalidate>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="form-error" id="form-error" role="alert" hidden></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" data-close>Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="modal-submit">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- CONFIRMAÇÃO -->
+<div class="modal-bg" id="confirm-bg">
+  <div class="modal-box modal-sm" role="alertdialog" aria-modal="true" aria-labelledby="confirm-title" aria-describedby="confirm-msg">
+    <div class="modal-head"><h3 id="confirm-title">Confirmar</h3></div>
+    <div class="modal-body"><p id="confirm-msg" class="confirm-msg"></p></div>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-ghost" id="confirm-cancel">Cancelar</button>
+      <button type="button" class="btn btn-primary" id="confirm-ok">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<script src="src/finance.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>

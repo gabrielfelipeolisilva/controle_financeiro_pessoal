@@ -1,0 +1,15 @@
+{
+  "name": "controle-financeiro",
+  "version": "2.0.0",
+  "description": "Controle financeiro pessoal em HTML/CSS/JS puros: entradas, despesas fixas e variáveis, parcelamentos, orçamentos e gráficos. PWA offline, dados no navegador.",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "exemplo": "node scripts/gerar-exemplo.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "license": "MIT"
+}

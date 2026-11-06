@@ -1,0 +1,23 @@
+# Dependências (instaladas com `npm install`, só para os testes)
+node_modules/
+
+# Relatório de cobertura (`npm run test:coverage`)
+coverage/
+
+# Backups e exportações com dados financeiros reais — nunca versionar
+financas_*.json
+financas_*.csv
+*.csv
+# (o exemplo-dados.json, com dados fictícios, continua versionado)
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Logs
+npm-debug.log*
+*.log

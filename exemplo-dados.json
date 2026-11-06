@@ -1,0 +1,451 @@
+{
+  "version": 2,
+  "currentYear": 2026,
+  "currentMonth": 11,
+  "months": {
+    "2026-09": {
+      "saldoInicial": 1200,
+      "saldoAuto": false,
+      "saldoInicialVR": 0,
+      "entradas": [
+        {
+          "data": "2026-09-05",
+          "tipo": "Salário",
+          "descricao": "Salário mensal",
+          "valor": 4200,
+          "recebido": true,
+          "obs": ""
+        },
+        {
+          "data": "2026-09-05",
+          "tipo": "Vale Refeição",
+          "descricao": "Vale Refeição",
+          "valor": 650,
+          "recebido": true,
+          "obs": "Cartão VR"
+        }
+      ],
+      "fixas": [
+        {
+          "categoria": "Moradia",
+          "descricao": "Aluguel",
+          "valor": 1500,
+          "vencimento": 5,
+          "pago": "Sim",
+          "formaPgto": "Transferência"
+        },
+        {
+          "categoria": "Moradia",
+          "descricao": "Conta de luz",
+          "valor": 140,
+          "vencimento": 12,
+          "pago": "Sim",
+          "formaPgto": "Boleto"
+        },
+        {
+          "categoria": "Moradia",
+          "descricao": "Internet",
+          "valor": 99.9,
+          "vencimento": 10,
+          "pago": "Sim",
+          "formaPgto": "Débito automático"
+        },
+        {
+          "categoria": "Assinaturas",
+          "descricao": "Streaming de vídeo",
+          "valor": 39.9,
+          "vencimento": 18,
+          "pago": "Sim",
+          "formaPgto": "Crédito"
+        },
+        {
+          "categoria": "Assinaturas",
+          "descricao": "Plano de celular",
+          "valor": 59.9,
+          "vencimento": 20,
+          "pago": "Sim",
+          "formaPgto": "Débito automático"
+        },
+        {
+          "categoria": "Saúde",
+          "descricao": "Academia",
+          "valor": 99.9,
+          "vencimento": 1,
+          "pago": "Sim",
+          "formaPgto": "Crédito"
+        }
+      ],
+      "variaveis": [
+        {
+          "data": "2026-09-03",
+          "categoria": "Mercado",
+          "descricao": "Supermercado do mês",
+          "valor": 520.4,
+          "formaPgto": "Débito",
+          "obs": ""
+        },
+        {
+          "data": "2026-09-09",
+          "categoria": "Alimentação",
+          "descricao": "Almoços no trabalho",
+          "valor": 410,
+          "formaPgto": "Vale Refeição",
+          "obs": ""
+        },
+        {
+          "data": "2026-09-14",
+          "categoria": "Transporte",
+          "descricao": "Aplicativo de transporte",
+          "valor": 86.5,
+          "formaPgto": "Crédito",
+          "obs": ""
+        },
+        {
+          "data": "2026-09-21",
+          "categoria": "Lazer",
+          "descricao": "Cinema",
+          "valor": 64,
+          "formaPgto": "PIX",
+          "obs": ""
+        },
+        {
+          "data": "2026-09-26",
+          "categoria": "Mercado",
+          "descricao": "Feira",
+          "valor": 92.3,
+          "formaPgto": "Dinheiro",
+          "obs": ""
+        }
+      ],
+      "parcelamentos": [
+        {
+          "descricao": "Notebook",
+          "categoria": "Eletrônicos",
+          "valorTotal": 3600,
+          "totalParcelas": 10,
+          "parcelaAtual": 4,
+          "valorParcela": 360,
+          "proxVcto": "2026-09-15",
+          "status": "Ativo"
+        },
+        {
+          "descricao": "Fone de ouvido",
+          "categoria": "Eletrônicos",
+          "valorTotal": 270,
+          "totalParcelas": 3,
+          "parcelaAtual": 1,
+          "valorParcela": 90,
+          "proxVcto": "2026-09-15",
+          "status": "Ativo"
+        }
+      ]
+    },
+    "2026-10": {
+      "saldoInicial": 0,
+      "saldoAuto": true,
+      "entradas": [
+        {
+          "data": "2026-10-05",
+          "tipo": "Salário",
+          "descricao": "Salário mensal",
+          "valor": 4200,
+          "recebido": true,
+          "obs": ""
+        },
+        {
+          "data": "2026-10-05",
+          "tipo": "Vale Refeição",
+          "descricao": "Vale Refeição",
+          "valor": 650,
+          "recebido": true,
+          "obs": "Cartão VR"
+        },
+        {
+          "data": "2026-10-18",
+          "tipo": "Freelance",
+          "descricao": "Projeto de site freelance",
+          "valor": 800,
+          "recebido": true,
+          "obs": ""
+        }
+      ],
+      "fixas": [
+        {
+          "categoria": "Moradia",
+          "descricao": "Aluguel",
+          "valor": 1500,
+          "vencimento": 5,
+          "pago": "Sim",
+          "formaPgto": "Transferência"
+        },
+        {
+          "categoria": "Moradia",
+          "descricao": "Conta de luz",
+          "valor": 140,
+          "vencimento": 12,
+          "pago": "Sim",
+          "formaPgto": "Boleto"
+        },
+        {
+          "categoria": "Moradia",
+          "descricao": "Internet",
+          "valor": 99.9,
+          "vencimento": 10,
+          "pago": "Sim",
+          "formaPgto": "Débito automático"
+        },
+        {
+          "categoria": "Assinaturas",
+          "descricao": "Streaming de vídeo",
+          "valor": 39.9,
+          "vencimento": 18,
+          "pago": "Sim",
+          "formaPgto": "Crédito"
+        },
+        {
+          "categoria": "Assinaturas",
+          "descricao": "Plano de celular",
+          "valor": 59.9,
+          "vencimento": 20,
+          "pago": "Sim",
+          "formaPgto": "Débito automático"
+        },
+        {
+          "categoria": "Saúde",
+          "descricao": "Academia",
+          "valor": 99.9,
+          "vencimento": 1,
+          "pago": "Sim",
+          "formaPgto": "Crédito"
+        }
+      ],
+      "variaveis": [
+        {
+          "data": "2026-10-04",
+          "categoria": "Mercado",
+          "descricao": "Supermercado do mês",
+          "valor": 610.2,
+          "formaPgto": "Débito",
+          "obs": ""
+        },
+        {
+          "data": "2026-10-08",
+          "categoria": "Alimentação",
+          "descricao": "Almoços no trabalho",
+          "valor": 480,
+          "formaPgto": "Vale Refeição",
+          "obs": ""
+        },
+        {
+          "data": "2026-10-12",
+          "categoria": "Delivery",
+          "descricao": "Pedido de pizza",
+          "valor": 72,
+          "formaPgto": "Crédito",
+          "obs": "Aniversário"
+        },
+        {
+          "data": "2026-10-16",
+          "categoria": "Saúde",
+          "descricao": "Farmácia",
+          "valor": 48.9,
+          "formaPgto": "PIX",
+          "obs": ""
+        },
+        {
+          "data": "2026-10-23",
+          "categoria": "Compras",
+          "descricao": "Presente de aniversário",
+          "valor": 150,
+          "formaPgto": "Crédito",
+          "obs": ""
+        }
+      ],
+      "parcelamentos": [
+        {
+          "descricao": "Notebook",
+          "categoria": "Eletrônicos",
+          "valorTotal": 3600,
+          "totalParcelas": 10,
+          "parcelaAtual": 5,
+          "valorParcela": 360,
+          "proxVcto": "2026-10-15",
+          "status": "Ativo"
+        },
+        {
+          "descricao": "Fone de ouvido",
+          "categoria": "Eletrônicos",
+          "valorTotal": 270,
+          "totalParcelas": 3,
+          "parcelaAtual": 2,
+          "valorParcela": 90,
+          "proxVcto": "2026-10-15",
+          "status": "Ativo"
+        },
+        {
+          "descricao": "Curso online",
+          "categoria": "Educação",
+          "valorTotal": 600,
+          "totalParcelas": 6,
+          "parcelaAtual": 1,
+          "valorParcela": 100,
+          "proxVcto": "2026-10-20",
+          "status": "Ativo"
+        }
+      ]
+    },
+    "2026-11": {
+      "saldoInicial": 0,
+      "saldoAuto": true,
+      "entradas": [
+        {
+          "data": "2026-11-05",
+          "tipo": "Salário",
+          "descricao": "Salário mensal",
+          "valor": 4200,
+          "recebido": true,
+          "obs": ""
+        },
+        {
+          "data": "2026-11-05",
+          "tipo": "Vale Refeição",
+          "descricao": "Vale Refeição",
+          "valor": 650,
+          "recebido": true,
+          "obs": "Cartão VR"
+        }
+      ],
+      "fixas": [
+        {
+          "categoria": "Moradia",
+          "descricao": "Aluguel",
+          "valor": 1500,
+          "vencimento": 5,
+          "pago": "Sim",
+          "formaPgto": "Transferência"
+        },
+        {
+          "categoria": "Moradia",
+          "descricao": "Conta de luz",
+          "valor": 140,
+          "vencimento": 12,
+          "pago": "Não",
+          "formaPgto": "Boleto"
+        },
+        {
+          "categoria": "Moradia",
+          "descricao": "Internet",
+          "valor": 99.9,
+          "vencimento": 10,
+          "pago": "Não",
+          "formaPgto": "Débito automático"
+        },
+        {
+          "categoria": "Assinaturas",
+          "descricao": "Streaming de vídeo",
+          "valor": 39.9,
+          "vencimento": 18,
+          "pago": "Não",
+          "formaPgto": "Crédito"
+        },
+        {
+          "categoria": "Assinaturas",
+          "descricao": "Plano de celular",
+          "valor": 59.9,
+          "vencimento": 20,
+          "pago": "Não",
+          "formaPgto": "Débito automático"
+        },
+        {
+          "categoria": "Saúde",
+          "descricao": "Academia",
+          "valor": 99.9,
+          "vencimento": 1,
+          "pago": "Sim",
+          "formaPgto": "Crédito"
+        }
+      ],
+      "variaveis": [
+        {
+          "data": "2026-11-02",
+          "categoria": "Mercado",
+          "descricao": "Supermercado do mês",
+          "valor": 548.7,
+          "formaPgto": "Débito",
+          "obs": ""
+        },
+        {
+          "data": "2026-11-07",
+          "categoria": "Alimentação",
+          "descricao": "Almoços no trabalho",
+          "valor": 260,
+          "formaPgto": "Vale Refeição",
+          "obs": ""
+        },
+        {
+          "data": "2026-11-08",
+          "categoria": "Delivery",
+          "descricao": "Lanche de sábado",
+          "valor": 95,
+          "formaPgto": "Crédito",
+          "obs": ""
+        },
+        {
+          "data": "2026-11-09",
+          "categoria": "Delivery",
+          "descricao": "Jantar por aplicativo",
+          "valor": 78.5,
+          "formaPgto": "PIX",
+          "obs": ""
+        },
+        {
+          "data": "2026-11-10",
+          "categoria": "Transporte",
+          "descricao": "Combustível",
+          "valor": 180,
+          "formaPgto": "Crédito",
+          "obs": ""
+        }
+      ],
+      "parcelamentos": [
+        {
+          "descricao": "Notebook",
+          "categoria": "Eletrônicos",
+          "valorTotal": 3600,
+          "totalParcelas": 10,
+          "parcelaAtual": 6,
+          "valorParcela": 360,
+          "proxVcto": "2026-11-15",
+          "status": "Ativo"
+        },
+        {
+          "descricao": "Fone de ouvido",
+          "categoria": "Eletrônicos",
+          "valorTotal": 270,
+          "totalParcelas": 3,
+          "parcelaAtual": 3,
+          "valorParcela": 90,
+          "proxVcto": "2026-11-15",
+          "status": "Ativo"
+        },
+        {
+          "descricao": "Curso online",
+          "categoria": "Educação",
+          "valorTotal": 600,
+          "totalParcelas": 6,
+          "parcelaAtual": 2,
+          "valorParcela": 100,
+          "proxVcto": "2026-11-20",
+          "status": "Ativo"
+        }
+      ]
+    }
+  },
+  "budgets": {
+    "Mercado": 700,
+    "Delivery": 150,
+    "Lazer": 200,
+    "Transporte": 300,
+    "Alimentação": 600
+  }
+}
